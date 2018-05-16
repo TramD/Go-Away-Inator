@@ -26,6 +26,8 @@ GPIO.setup(button, GPIO.IN, GPIO.PUD_DOWN)
 # set camera as a picamera
 camera = PiCamera()
 
+# Start Credit: The heard function was edited using the Server example from the following site as the base:
+# http://blog.whaleygeek.co.uk/raspberry-pi-internet-of-things-demonstrator/
 # function is called when server and client connect
 def heard(phrase):
 
@@ -41,8 +43,13 @@ def heard(phrase):
             #print "Button 2" (Used for testing)
             response = ServerModule.runButton2()
 
+# End Credit
+
     # begins the heard function on the client
     network.say("START")
+
+# Start Credit: The code to send the image file came from the RetrFile function from the following video:
+# https://youtu.be/LJTaPaFGmM4?t=5m42s
 
     # sets the filename that it received from the client
     filename = network.peerHandle.recv(1024)
@@ -70,6 +77,8 @@ def heard(phrase):
     else:
         # send error message if file does not exist
         network.peerHandle.send("ERR ")
+	
+# End Credit
     
 while (True):
 
@@ -86,6 +95,9 @@ while (True):
 	    # close the preview window
 	    camera.stop_preview()
 	    
+# Start Credit: The code to start the connection of the server came from Server example from the following site:
+# http://blog.whaleygeek.co.uk/raspberry-pi-internet-of-things-demonstrator/
+	
             # begin waiting for a connection
             # call heard function when it accepts connection from client
             print "waiting for connection"
@@ -98,4 +110,5 @@ while (True):
             # when connection ends print message    
             print "connetion closed"
 
+# End Credit
     
