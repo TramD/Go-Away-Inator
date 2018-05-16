@@ -1,5 +1,6 @@
 # Credit: This program was downloaded from this site: http://blog.whaleygeek.co.uk/raspberry-pi-network-chat-in-python/. This program
-# is imported into the other programs as a module. 
+# is imported into the other programs as a module/ and it deals with networking between the two Pis. This includes connecting
+# the two Pi's, and sending and receiving data between the Pi's.
 # network.py  (c) 2013 @whaleygeek
 
 import thread
