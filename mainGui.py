@@ -1,10 +1,11 @@
-############################################################################
+#########################################################################################
 
-# This program was able to take a picture using the camera, pull up the
-# GUI with the picture and buttons, and pull up the response GUI depending
-# on the button that was pressed. This only works on one Pi.
+# This program is the combination of the cameraGUI.py, camera practice.py,
+# and responseGUI.py. This program was able to take a picture using the camera, 
+# pull up the GUI with the picture and buttons, and pull up the response GUI depending
+# on the button that was pressed. However, this only works on one Pi.
 
-############################################################################
+#########################################################################################
 
 from picamera import PiCamera
 from time import sleep
@@ -79,27 +80,26 @@ class GUIRes(Frame):
         display = Label(self.master, text="swagger money", anchor=S, bg="white", height=1, font=("TexGyreAdventor", 30))
         display.grid(row=3, column=0, columnspan=4, rowspan=7, sticky=N+S+E+W)
 
-
-  
-        
+# set button pin number to 19        
 button = 19
-
+# use the Broadcom pin mode
 GPIO.setmode(GPIO.BCM)
-
+# setup the input pin
 GPIO.setup(button, GPIO.IN, GPIO.PUD_DOWN)
-
+# set camera as a picamera
 camera = PiCamera()
 
 ####################################################################
 
 WIDTH=400
 HEIGHT=400
+
 # create the window
 window = Tk()
 window.title("The Go Away-inator")
-
 p = MainGUI(window)
 
+# take a picture and display the GUI
 try:
     while (True):
         if (GPIO.input(button) == GPIO.HIGH):
