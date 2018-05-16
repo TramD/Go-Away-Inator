@@ -1,3 +1,5 @@
+# Credit: This program was downloaded from this site: http://blog.whaleygeek.co.uk/raspberry-pi-network-chat-in-python/. This program
+# is imported into the other programs as a module. 
 # network.py  (c) 2013 @whaleygeek
 
 import thread
