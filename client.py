@@ -15,13 +15,18 @@ import network
 import ClientModule
 import socket
 
+# Start Credit: The following code came from the Client example from the following site:
+# http://blog.whaleygeek.co.uk/raspberry-pi-internet-of-things-demonstrator/
 # the server IP address is taken from the command line
 SERVER_IP = sys.argv[1]
 gotResponse = False
 
 # function is called when server and client connect
 def heard(phrase):
+    
+# End Credit
 
+    # 
     # sets the name of the image file
     filename = "image.gif"
     
