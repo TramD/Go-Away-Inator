@@ -26,7 +26,8 @@ def heard(phrase):
     
 # End Credit
 
-    # 
+    # Start Credit: The code to receive and download the image file came from the client Main function from the following video:
+    # https://youtu.be/LJTaPaFGmM4?t=17m41s
     # sets the name of the image file
     filename = "image.gif"
     
@@ -72,9 +73,12 @@ def heard(phrase):
             # print response if file does not exists in server
             print ("File Does Not Exist!")
 
+# End Credit            
+            
     # calls the function that will display the GUI from the ClientModule program
     ClientGUI = ClientModule.run()
 
+#
 # connect to the server and call the heard function once connected    
 while(True): 
     try:
@@ -96,6 +100,6 @@ while network.isConnected():
 # when connection ends print message
 print "connection closed"
 
-
+# End Credit
 
 
