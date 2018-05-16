@@ -26,8 +26,8 @@ def heard(phrase):
     
 # End Credit
 
-    # Start Credit: The code to receive and download the image file came from the client Main function from the following video:
-    # https://youtu.be/LJTaPaFGmM4?t=17m41s
+# Start Credit: The code to receive and download the image file came from the client Main function from the following video:
+# https://youtu.be/LJTaPaFGmM4?t=17m41s
     # sets the name of the image file
     filename = "image.gif"
     
@@ -78,7 +78,8 @@ def heard(phrase):
     # calls the function that will display the GUI from the ClientModule program
     ClientGUI = ClientModule.run()
 
-#
+# Start Credit: The code to start the connection of the client came from Client example from the following site:
+# http://blog.whaleygeek.co.uk/raspberry-pi-internet-of-things-demonstrator/
 # connect to the server and call the heard function once connected    
 while(True): 
     try:
